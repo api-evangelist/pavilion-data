@@ -1,0 +1,67 @@
+generated: '2026-08-26'
+method: searched
+source: https://blocksandfiles.com/2022/10/10/pavilion-data-crashes-last-nvme-over-fabrics-array-startup-has-died/
+note: >-
+  This is an END-OF-LIFE record, not a versioning/deprecation policy. Pavilion Data Systems
+  published no deprecation policy, no status page and no changelog that survives, because the
+  company itself is gone. Recorded so the catalog can distinguish "provider never published a
+  lifecycle policy" from "provider no longer exists".
+status: discontinued
+company_status: ceased-operations
+end_of_life:
+  date: '2022-10-12'
+  announced: '2022-10-10'
+  mechanism: >-
+    Operations ceased after attempts to sell the company and to raise a further round both
+    failed. Reported as a wind-down rather than a bankruptcy filing.
+  successor: null
+  acquirer: null
+  acquirer_note: >-
+    No acquisition of the company or its assets has been confirmed from a primary source.
+    Secondary summaries circulate an SK hynix / Solidigm claim; it was not corroborated by any
+    source reachable in this pass and is therefore NOT recorded as fact.
+products:
+  - name: Pavilion HyperParallel Flash Array (HFA)
+    category: NVMe-over-Fabrics rack-scale flash array
+    status: discontinued
+  - name: Pavilion HyperOS
+    category: storage operating system
+    latest_known_version: '3.0'
+    latest_known_release: '2020-11'
+    status: discontinued
+  - name: Pavilion HyperParallel File System
+    category: parallel file system
+    status: discontinued
+api_surface:
+  status: gone
+  ever_published_publicly: false
+  detail: >-
+    The product datasheet advertises a RESTful API alongside DMTF Redfish and SNIA Swordfish,
+    a Web GUI and a CLI, plus vCenter / Kubernetes / OpenStack integrations. That management
+    API shipped with the appliance and its reference was never published at a public URL that
+    can be found today; the company's own site is offline.
+versioning_policy: null
+deprecation_policy: null
+sunset_header: null
+sla: null
+status_page: null
+support: null
+web_presence:
+  domain: pavilion.io
+  registered: true
+  http_reachable: false
+  probed: '2026-08-26'
+  detail: >-
+    DNS still answers (A records on AWS us-west-2, Google MX, live SPF/DMARC) but TCP 80 and
+    443 are refused on every address. No archive of the site is wired here — an archived copy
+    is not a surface the provider serves.
+references:
+  - url: https://blocksandfiles.com/2022/10/10/pavilion-data-crashes-last-nvme-over-fabrics-array-startup-has-died/
+    title: 'Pavilion Data – last NVMe over Fabrics flash array startup – has died'
+    status: 200
+  - url: https://www.computerweekly.com/news/252526009/Bowled-out-NVMe-flash-pioneer-Pavilion-Data-ceases-business
+    title: 'Bowled out: NVMe flash pioneer Pavilion Data ceases business'
+    status: not-fetched
+  - url: https://static.carahsoft.com/concrete/files/3315/9423/6601/Pavilion-Data_Datasheet_NVMe-oF_Storage_Array.pdf
+    title: Pavilion HyperParallel Flash Array datasheet (reseller-hosted vendor PDF)
+    status: 200

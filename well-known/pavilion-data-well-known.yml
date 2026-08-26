@@ -1,0 +1,68 @@
+generated: '2026-08-26'
+method: probed
+source: https://pavilion.io/.well-known/ (probed 2026-08-26)
+note: >-
+  No documents were retrieved and NO WellKnown/SecurityTxt pointer is wired. This is not
+  a 404 record — it is an unreachable-host record. pavilion.io still resolves in DNS but
+  refuses TCP on 80 and 443, so every request below failed at connect time and returned
+  no HTTP status at all (curl reports 000 / exit 28). Pavilion Data Systems ceased
+  operations on 2022-10-12; the company had no other host to probe (docs., api., support.,
+  developer., portal., status. and blog..pavilion.io are all NXDOMAIN).
+hit_count: 0
+hosts:
+  - host: https://pavilion.io
+    reachable: false
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/openid-configuration
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/api-catalog
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/ai-plugin.json
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/agent-card.json
+        status: 0
+        file: null
+        error: connection refused / no response
+      - path: /.well-known/agent.json
+        status: 0
+        file: null
+        error: connection refused / no response
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery was attempted and failed at the transport layer, not at the
+    parse layer. Recorded so a later round does not repeat it as if it were untried.
+  probes:
+    - url: https://pavilion.io/openapi.json
+      status: 0
+    - url: https://pavilion.io/swagger.json
+      status: 0
+    - url: https://pavilion.io/llms.txt
+      status: 0
+  subdomains_checked:
+    - {host: docs.pavilion.io, dns: NXDOMAIN}
+    - {host: api.pavilion.io, dns: NXDOMAIN}
+    - {host: support.pavilion.io, dns: NXDOMAIN}
+    - {host: developer.pavilion.io, dns: NXDOMAIN}
+    - {host: portal.pavilion.io, dns: NXDOMAIN}
+    - {host: status.pavilion.io, dns: NXDOMAIN}
+    - {host: blog.pavilion.io, dns: NXDOMAIN}
+  graphql: not-applicable — no reachable host to introspect
+  mcp: not-applicable — no reachable host to POST tools/list to
+  a2a: >-
+    Both /.well-known/agent-card.json and the legacy /.well-known/agent.json were attempted
+    and neither returned a response. Nothing was written to a2a/ — agent cards are
+    search-only and this probe produced no hit.

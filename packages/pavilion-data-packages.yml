@@ -1,0 +1,56 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  npm, PyPI, RubyGems, crates.io, NuGet, Maven Central and pkg.go.dev registry searches plus
+  the GitHub account github.com/paviliondata (probed 2026-08-26)
+note: >-
+  NO first-party client SDK was ever published to a package registry, so no `SDKs` pointer is
+  wired. The only public code the company shipped is three GitHub repositories on its own
+  account, and all three are FORKS of upstream Linux NVMe projects carrying a Pavilion host
+  driver patch — kernel/driver source, not an API client library. None is versioned, tagged or
+  distributed through a registry, and the newest was last pushed in June 2018, four years
+  before the company ceased operations on 2022-10-12.
+sdk_count: 0
+package_count: 0
+packages: []
+source_distributions:
+  - name: mpath_nvmeof
+    registry: github
+    url: https://github.com/paviliondata/mpath_nvmeof
+    description: Pavilion host driver with multipath support on latest kernel 4.13.0-rc1
+    language: c
+    official: true
+    kind: driver-source
+    version: null
+    published: '2017-09-27'
+    version_note: >-
+      No tags or releases; distribution is a git checkout, so there is no version a consumer
+      can pin. `published` is the last push date reported by the GitHub API.
+  - name: nvme
+    registry: github
+    url: https://github.com/paviliondata/nvme
+    description: nvmeof repo (fork of the upstream Linux NVMe tree)
+    language: c
+    official: true
+    kind: fork
+    version: null
+    published: '2017-09-12'
+    version_note: Untagged fork; no registry metadata endpoint exists to query.
+  - name: nvme-cli
+    registry: github
+    url: https://github.com/paviliondata/nvme-cli
+    description: NVMe management command line interface (fork of linux-nvme/nvme-cli)
+    language: c
+    official: true
+    kind: fork
+    version: null
+    published: '2018-06-05'
+    version_note: Untagged fork; no registry metadata endpoint exists to query.
+registries_checked:
+  - {registry: npm, result: no first-party package found}
+  - {registry: pypi, result: no first-party package found}
+  - {registry: rubygems, result: no first-party package found}
+  - {registry: crates.io, result: no first-party package found}
+  - {registry: nuget, result: no first-party package found}
+  - {registry: maven-central, result: no first-party package found}
+  - {registry: pkg.go.dev, result: no first-party package found}

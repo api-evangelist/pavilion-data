@@ -1,0 +1,59 @@
+generated: '2026-08-26'
+method: searched
+source: https://static.carahsoft.com/concrete/files/3315/9423/6601/Pavilion-Data_Datasheet_NVMe-oF_Storage_Array.pdf
+note: >-
+  Every entry below is UNVERIFIED by design. Pavilion Data Systems ceased operations on
+  2022-10-12 and its site is offline, so there is no contract, no reference and no live
+  endpoint against which any of these claims could be checked. `conforms: false` here means
+  "not demonstrated", not "demonstrated absent". No Compliance pointer is wired, because no
+  certification or audit report was found.
+verifiable: false
+verification_blocker: >-
+  pavilion.io refuses TCP 80/443 (probed 2026-08-26); no machine-readable contract exists in
+  this repo or at any reachable provider host.
+standards:
+  - id: dmtf-redfish
+    name: DMTF Redfish
+    conforms: false
+    claimed: true
+    evidence:
+      - type: vendor-datasheet
+        quote: 'Flexible Management: Web GUI and CLI; vCenter, Kubernetes, and OpenStack; RESTful API, DTMF/Redfish, and Swordfish'
+        url: https://static.carahsoft.com/concrete/files/3315/9423/6601/Pavilion-Data_Datasheet_NVMe-oF_Storage_Array.pdf
+    note: >-
+      Redfish is the domain standard for this market (storage / infrastructure management).
+      The datasheet declares support; no Redfish service root was reachable to confirm it.
+  - id: snia-swordfish
+    name: SNIA Swordfish
+    conforms: false
+    claimed: true
+    evidence:
+      - type: vendor-datasheet
+        quote: 'RESTful API, DTMF/Redfish, and Swordfish'
+        url: https://static.carahsoft.com/concrete/files/3315/9423/6601/Pavilion-Data_Datasheet_NVMe-oF_Storage_Array.pdf
+    note: Swordfish is the SNIA storage extension of Redfish; same verification blocker.
+  - id: nvme-of
+    name: NVMe over Fabrics (NVM Express)
+    conforms: false
+    claimed: true
+    evidence:
+      - type: product-category
+        note: >-
+          NVMe-oF is the wire protocol the array itself implements (RoCE / TCP / InfiniBand).
+          It is a data-path standard, not an API contract, and is recorded here only because
+          it is the domain standard the product was built around.
+  - id: openstack-cinder
+    name: OpenStack Cinder driver
+    conforms: false
+    claimed: true
+    evidence:
+      - type: vendor-datasheet
+        quote: 'vCenter, Kubernetes, and OpenStack'
+        url: https://static.carahsoft.com/concrete/files/3315/9423/6601/Pavilion-Data_Datasheet_NVMe-oF_Storage_Array.pdf
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    conforms: false
+    claimed: false
+    evidence:
+      - type: none
+        note: No contract available to inspect.
