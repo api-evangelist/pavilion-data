@@ -1,16 +1,14 @@
 aid: pavilion-data
 name: Pavilion
-description: >-
-  Pavilion Data Systems was a San Jose, California storage company founded in 2014 by Kiran
-  Malwankar, Sundar Kanthadai and VR Satish. It built the Pavilion HyperParallel Flash Array
-  (HFA) — a rack-scale NVMe-over-Fabrics array with up to 20 controllers and 72 SSDs in a 4U
-  chassis — running its own HyperOS storage operating system, later extended with the
-  HyperParallel File System for AI, analytics and HPC workloads. The product datasheet
-  advertised flexible management through a RESTful API, DMTF Redfish and SNIA Swordfish, a web
-  GUI and a CLI, plus vCenter, Kubernetes and OpenStack integrations, but that management
-  reference shipped with the appliance and was never published at a public developer URL.
-  The company ceased operations on 12 October 2022 after attempts to sell the business and to
-  raise a further round both failed, and pavilion.io no longer serves HTTP.
+description: Pavilion Data Systems was a San Jose, California storage company founded in 2014 by Kiran
+  Malwankar, Sundar Kanthadai and VR Satish. It built the Pavilion HyperParallel Flash Array (HFA) — a
+  rack-scale NVMe-over-Fabrics array with up to 20 controllers and 72 SSDs in a 4U chassis — running its
+  own HyperOS storage operating system, later extended with the HyperParallel File System for AI, analytics
+  and HPC workloads. The product datasheet advertised flexible management through a RESTful API, DMTF
+  Redfish and SNIA Swordfish, a web GUI and a CLI, plus vCenter, Kubernetes and OpenStack integrations,
+  but that management reference shipped with the appliance and was never published at a public developer
+  URL. The company ceased operations on 12 October 2022 after attempts to sell the business and to raise
+  a further round both failed, and pavilion.io no longer serves HTTP.
 url: https://raw.githubusercontent.com/api-evangelist/pavilion-data/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -43,7 +41,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-08-26'
-modified: '2026-08-26'
+modified: '2026-09-15'
 tags:
 - Company
 - Storage
@@ -76,15 +74,12 @@ common:
 - type: DomainSecurity
   url: security/pavilion-data-domain-security.yml
 x-pointer-notes:
-  website: >-
-    NO Website pointer is wired. The company domain pavilion.io still resolves in DNS but
-    refuses TCP 80 and 443 (probed 2026-08-26), so a Website pointer would be a confirmed-dead
-    pointer. The Forge Global page is a secondary-market trading venue listing, not the
-    company's web presence, and has been re-typed to the non-scoring SecondaryMarketListing so
-    it stops standing in for a Website (roadmap#56).
-  well_known: >-
-    well-known/pavilion-data-well-known.yml records the probe but carries NO WellKnown or
-    SecurityTxt pointer — every path failed at connect time, so nothing was served.
+  website: NO Website pointer is wired. The company domain pavilion.io still resolves in DNS but refuses
+    TCP 80 and 443 (probed 2026-08-26), so a Website pointer would be a confirmed-dead pointer. The Forge
+    Global page is a secondary-market trading venue listing, not the company's web presence, and has been
+    re-typed to the non-scoring SecondaryMarketListing so it stops standing in for a Website (roadmap#56).
+  well_known: well-known/pavilion-data-well-known.yml records the probe but carries NO WellKnown or SecurityTxt
+    pointer — every path failed at connect time, so nothing was served.
 x-enrichment:
   date: '2026-08-26'
   status: minimal
@@ -93,17 +88,17 @@ x-enrichment:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    Pavilion Data Systems ceased operations on 2022-10-12; pavilion.io still resolves to two
-    AWS addresses and publishes SPF/DMARC, but both A records refuse TCP 80 and 443 and every
-    developer subdomain (docs, api, developer, portal, support, status) is NXDOMAIN.
+  detail: Pavilion Data Systems ceased operations on 2022-10-12; pavilion.io still resolves to two AWS
+    addresses and publishes SPF/DMARC, but both A records refuse TCP 80 and 443 and every developer subdomain
+    (docs, api, developer, portal, support, status) is NXDOMAIN.
   evidence:
-    - url: https://pavilion.io/
-      status: 0
-    - url: https://pavilion.io/.well-known/agent-card.json
-      status: 0
-    - url: https://pavilion.io/openapi.json
-      status: 0
-    - url: https://github.com/paviliondata
-      status: 200
+  - url: https://pavilion.io/
+    status: 0
+  - url: https://pavilion.io/.well-known/agent-card.json
+    status: 0
+  - url: https://pavilion.io/openapi.json
+    status: 0
+  - url: https://github.com/paviliondata
+    status: 200
   checked: '2026-08-26'
+x-status: defunct
